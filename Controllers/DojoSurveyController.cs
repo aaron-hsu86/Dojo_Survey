@@ -35,7 +35,8 @@ public class DojoSurveyController : Controller   // Remember inheritance?
     )
     {
         Console.WriteLine("Results");
-        ViewBag.Name = name;
+        if (string.IsNullOrWhiteSpace(name)) ViewBag.Name = "No name provided";
+        else ViewBag.Name = name;
         ViewBag.Location = location;
         ViewBag.Language = language;
         ViewBag.Comment = comment;
