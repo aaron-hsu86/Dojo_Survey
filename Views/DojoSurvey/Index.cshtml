@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    @* <form action="process" method="post"> *@
+    <form action="results" method="post">
+        <fieldset>
+            <div class="itemSelect">
+                <label for="name">Your Name:</label>
+                <input type="text" name="name" class="selection">
+            </div>
+            <div class="itemSelect">
+                <label for="location">Dojo Location:</label>
+                <select name="location" class="selection">
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="New York">New York</option>
+                </select>
+            </div>
+            <div class="itemSelect">
+                <label for="language">Favorite Language:</label>
+                <select name="language" class="selection">
+                    <option value="C#">C#</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                </select>
+            </div>
+            <div class="comment">
+                <label for="comment">Comment (optional):</label>
+                <textarea name="comment" rows="5" placeholder="Optional..."></textarea>
+            </div>
+            <div class="button">
+                <button type="submit">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

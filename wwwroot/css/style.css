@@ -1,0 +1,34 @@
+fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 5px;
+    padding: 20px;
+}
+
+.itemSelect {
+    display: flex;
+    justify-content: space-between;
+}
+
+.selection {
+    width: 250px;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    resize: none;
+}
+
+.button {
+    display: flex;
+    justify-content: end;
+}
+
+.noComment {
+    color: lightgray;
+}

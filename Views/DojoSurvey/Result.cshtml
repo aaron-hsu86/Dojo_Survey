@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+
+<body>
+    <fieldset>
+        <h1><u>Submitted Info</u></h1>
+        <div class="itemSelect">
+            <p>Name:</p>
+            <p>@(ViewBag.Name != null?ViewBag.Name:"No name provided")</p>
+        </div>
+        <div class="itemSelect">
+            <p>Dojo Location:</p>
+            <p>@ViewBag.Location</p>
+        </div>
+        <div class="itemSelect">
+            <p>Favorite Language:</p>
+            <p>@ViewBag.Language</p>
+        </div>
+        <div class="itemSelect">
+            <p>Comment (optional):</p>
+            @{
+                if(ViewBag.Comment != null)
+                {
+                    <p>@ViewBag.Comment</p>
+                }
+                else
+                {
+                    <p class="noComment">No comment</p>
+                }
+            }
+        </div>
+        <a href="/" class="button"><button>Go Back</button></a>
+    </fieldset>
+</body>
+
+</html>
