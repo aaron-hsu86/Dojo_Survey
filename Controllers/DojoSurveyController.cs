@@ -22,8 +22,6 @@ public class DojoSurveyController : Controller   // Remember inheritance?
         ViewBag.Test = "test";
         return RedirectToAction("Result");
     }
-
-    // [HttpGet("results")]
     
 
     [HttpPost("results")]
@@ -34,7 +32,6 @@ public class DojoSurveyController : Controller   // Remember inheritance?
         string comment
     )
     {
-        Console.WriteLine("Results");
         if (string.IsNullOrWhiteSpace(name)) ViewBag.Name = "No name provided";
         else ViewBag.Name = name;
         ViewBag.Location = location;
